@@ -1,0 +1,65 @@
+<header class="header">
+
+	<div class="header__top">
+		<div class="container">
+			<div class="header__layout">
+				<div class="header__text">Изделия из металла!</div>
+				<div class="header__marker">{{mixins.icon('facebook')}}</div>
+				<div class="header__text">г. Киев ул. Чистяковская, 32</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="header__main">
+		<div class="container">
+			<div class="header__layout">
+				<div class="header__logo">
+					<img src="img/logo.png" alt="Логотип">
+				</div>
+				<div class="header__solution">
+					{{mixins.icon('facebook')}}
+					<span>Работать с нами</span>
+					<span>лучшее решение!</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="header__nav">
+		<div class="container">
+			<div class="header__layout">
+				<ul class="main-nav">
+					{% set links = [
+						{
+							title: 'ГЛАВНАЯ'
+						},
+						{
+							title: 'УСЛУГИ'
+						},
+						{
+							title: 'О НАС'
+						},
+						{
+							title: 'ТОВАРЫ'
+						},
+						{
+							title: 'КОНТАКТЫ'
+						}
+					]
+					%}
+					{% for link in links %}
+					<li class="main-nav__item">
+						<a href="#" class="main-nav__link">{{link.title}}</a>
+					</li>
+					{% endfor %}
+				</ul>
+
+				<div class="header__user">
+					<div class="request">Заявка</div>
+					<div class="search">Поиск</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</header>
